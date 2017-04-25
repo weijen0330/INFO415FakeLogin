@@ -1,0 +1,104 @@
+html, body {
+    height: 100%;
+}
+
+.sessions {
+    background: #f6f8f8;
+}
+
+body {
+    font-family: 'Gotham SSm A', 'Gotham SSm B', sans-serif;
+    font-weight: 200;
+    font-size: 90%;
+    margin: 0;
+    overflow: hidden;
+}
+#signin {
+    color: #2a5669;
+    margin: 20% auto 0;
+    max-width: 500px;
+    -webkit-transition: opacity 400ms ease-in-out;
+    transition: opacity 400ms ease-in-out;
+    opacity: 1;
+}
+
+.error-msg {
+    background: #c95b50;
+    padding: 1em 1.5rem;
+    line-height: 1.5em;
+    font-size: 0.8em;
+    color: #fff;
+    display: none;
+}
+
+.supplemental-link {
+    color: #4eaacc;
+    display: block;
+    margin-top: 1.5em;
+}
+
+a {
+    color: #2a5669;
+    text-decoration: none;
+    border-bottom: 1px solid #f5f6f7;
+}
+
+input {
+    font-family: 'Gotham SSm A', 'Gotham SSm B', sans-serif;
+    font-weight: 500;
+    margin: 0;
+    -webkit-appearance: none;
+    width: 100%;
+    font-size: 0.9em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 100%;
+    border: none;
+    padding: 1rem 1.3rem;
+    color: #2a5669;
+    border-left: 0.3rem solid #fff;
+    display: block;
+}
+
+input.submit-btn, a.submit-btn {
+    font-family: 'Gotham SSm A', 'Gotham SSm B', sans-serif;
+    font-weight: 500;
+    -webkit-transition: background 300ms ease-in-out, color 300ms ease-in-out;
+    transition: background 300ms ease-in-out, color 300ms ease-in-out;
+    background: #a3cddd;
+    border: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    color: #7eb9cf;
+    display: block;
+    font-size: 0.9em;
+    text-align: left;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100%;
+    padding: 1rem 1.5rem;
+}
+
+#login-fields input:nth-of-type(1), #login-fields-wrapper input:nth-of-type(1) {
+    margin-bottom: 1px;
+}
+
+#compliance-footer {
+    font-size: 0.7em;
+    margin-top: 10em;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+}
+
+#fdic-logo {
+    display: none;
+}
+
+@media screen and (min-device-width: 321px) {
+    body {
+        font-size: 110%;
+    }
+}
+
