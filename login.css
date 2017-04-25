@@ -1,5 +1,17 @@
 html, body {
     height: 100%;
+
+}
+
+@font-face {
+    font-family: 'GothamLight';
+    src: url('GothamLight.otf');
+}
+
+
+@font-face {
+    font-family: 'GothamMedium';
+    src: url('GothamMedium.otf');
 }
 
 .sessions {
@@ -7,12 +19,14 @@ html, body {
 }
 
 body {
-    font-family: 'Gotham SSm A', 'Gotham SSm B', sans-serif;
+    font-family: 'GothamLight', sans-serif;
     font-weight: 200;
     font-size: 90%;
     margin: 0;
-    overflow: hidden;
+    overflow: auto;
+    display: block;
 }
+
 #signin {
     color: #2a5669;
     margin: 20% auto 0;
@@ -31,11 +45,6 @@ body {
     display: none;
 }
 
-.supplemental-link {
-    color: #4eaacc;
-    display: block;
-    margin-top: 1.5em;
-}
 
 a {
     color: #2a5669;
@@ -44,7 +53,7 @@ a {
 }
 
 input {
-    font-family: 'Gotham SSm A', 'Gotham SSm B', sans-serif;
+    font-family: 'GothamMedium', sans-serif;
     font-weight: 500;
     margin: 0;
     -webkit-appearance: none;
@@ -61,7 +70,7 @@ input {
 }
 
 input.submit-btn, a.submit-btn {
-    font-family: 'Gotham SSm A', 'Gotham SSm B', sans-serif;
+    font-family: 'GothamMedium', sans-serif;
     font-weight: 500;
     -webkit-transition: background 300ms ease-in-out, color 300ms ease-in-out;
     transition: background 300ms ease-in-out, color 300ms ease-in-out;
@@ -83,6 +92,15 @@ input.submit-btn, a.submit-btn {
     margin-bottom: 1px;
 }
 
+.supplemental-link {
+    color: #4eaacc;
+    display: block;
+    margin-top: 1.5em;
+    font-size: 0.8em;
+    text-decoration: none;
+    line-height: 1.5em;
+}
+
 #compliance-footer {
     font-size: 0.7em;
     margin-top: 10em;
@@ -90,10 +108,56 @@ input.submit-btn, a.submit-btn {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2em;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 #fdic-logo {
     display: none;
+}
+input::placeholder, #compliance-footer > p  {
+    color: #C0C0C0;
+}
+
+input:focus {
+    padding: 1rem 1.5rem 1rem 1.3rem;
+    border-left: 0.3rem solid #4eaacc;
+    outline: none;
+}
+
+input.submit-btn:hover, input.submit-btn:active, a.submit-btn:hover, a.submit-btn.current, .submit-btn.current.link, a.submit-btn:active {
+    background: #44a5c9;
+}
+
+a:hover, .link:hover {
+    color: #28718c;
+}
+
+a:active, a:hover, a.current, .current.link {
+    outline: 0;
+}
+@media screen and (max-width: 768px) {
+    #compliance-footer {
+        display: none;
+    }
+    .supplemental-link {
+
+        padding-left: 2em;
+    }
+    .supplemental-link {
+        color: #4eaacc;
+        display: block;
+        margin-top: 1.5em;
+    }
+    a {
+        color: #2a5669;
+        text-decoration: none;
+        border-bottom: 1px solid #f5f6f7;
+    }
+
+    h2, p {
+        padding: 0 1.5rem;
+    }
 }
 
 @media screen and (min-device-width: 321px) {
